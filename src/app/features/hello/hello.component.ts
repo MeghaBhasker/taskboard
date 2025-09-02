@@ -1,12 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-hello',
   standalone: true,
-  imports: [],
-  template: `
-    <h1>Hello Aswath 👋</h1>
-    <p>Welcome to Angular 19 in VS Code!</p>
-  `,
+  templateUrl: './hello.html',
+  styleUrls: ['./hello.scss'],
 })
-export class AppComponent {}
+export class HelloComponent {
+  name = signal('Megha');
+  private toggle = false;
+
+  rename() {
+    this.toggle = !this.toggle;
+    this.name.set(this.toggle ? 'World' : 'Megha');
+  }
+}
