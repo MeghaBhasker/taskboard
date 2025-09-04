@@ -1,0 +1,13 @@
+nav {
+  margin: 1rem;
+  a {
+    text-decoration: none;
+    margin-right: 1rem;
+    color: #007acc;
+
+    &.active {
+      font-weight: bold;
+      text-decoration: underline;
+    }
+  }
+}

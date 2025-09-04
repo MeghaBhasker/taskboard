@@ -1,4 +1,11 @@
 <main class="p-8 max-w-3xl mx-auto">
-  <h1 class="text-3xl font-bold mb-6">Taskboard</h1>
-  <app-hello></app-hello>
+  <h1 class="text-3xl font-bold mb-4">Taskboard</h1>
+
+  <nav class="mb-6">
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Board</a>
+    &nbsp;|&nbsp;
+    <a routerLink="/about" routerLinkActive="active">About</a>
+  </nav>
+
+  <router-outlet />
 </main>
